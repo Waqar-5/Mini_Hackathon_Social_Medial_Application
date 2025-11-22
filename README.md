@@ -2,10 +2,6 @@
 
 A simple, lightweight social media web application built with **HTML**, **CSS**, and **JavaScript**, featuring user authentication, post creation, comments, reactions, and a dashboard. It supports **dark mode** and responsive design for mobile and desktop screens.
 
-
-![Uploading Screenshot (178).png…]()
-
-
 ---
 
 ## Table of Contents
