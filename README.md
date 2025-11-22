@@ -35,7 +35,8 @@ A simple, lightweight social media web application built with **HTML**, **CSS**,
 
 ## Demo
 
-![c:\Users\HAJI LAPTOP\Pictures\Screenshots\Screenshot (178).png]()
+![SocialApp Screenshot](https://github.com/<Waqar-5>/<repo-name>/raw/main/Screenshot%20(178).png)
+
 
 ---
 
