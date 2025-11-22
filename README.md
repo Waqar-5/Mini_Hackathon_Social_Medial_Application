@@ -33,7 +33,13 @@ A simple, lightweight social media web application built with **HTML**, **CSS**,
 
 ---
 
-## Demo
+---
+
+## Demo: 
+https://elegant-pothos-052fe8.netlify.app/
+
+---
+## image
 
 <img width="1339" height="654" alt="Screenshot (178)" src="https://github.com/user-attachments/assets/06ef701d-4ec4-40b9-a348-e658331634b0" />
 
