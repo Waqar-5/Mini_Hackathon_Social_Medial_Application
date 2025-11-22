@@ -39,6 +39,10 @@ A simple, lightweight social media web application built with **HTML**, **CSS**,
 
 ---
 
+
+# image:
+c:\Users\HAJI LAPTOP\Pictures\Screenshots\Screenshot (178).png
+
 ## Technologies Used
 
 - **HTML5**
