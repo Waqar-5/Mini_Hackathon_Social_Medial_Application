@@ -3,8 +3,8 @@
 A simple, lightweight social media web application built with **HTML**, **CSS**, and **JavaScript**, featuring user authentication, post creation, comments, reactions, and a dashboard. It supports **dark mode** and responsive design for mobile and desktop screens.
 
 
-# image:
-c:\Users\HAJI LAPTOP\Pictures\Screenshots\Screenshot (178).png
+![Uploading Screenshot (178).png…]()
+
 
 ---
 
