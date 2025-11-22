@@ -35,7 +35,7 @@ A simple, lightweight social media web application built with **HTML**, **CSS**,
 
 ## Demo
 
-![SocialApp Screenshot](c:\Users\HAJI LAPTOP\Pictures\Screenshots\Screenshot (178).png)
+![c:\Users\HAJI LAPTOP\Pictures\Screenshots\Screenshot (178).png]()
 
 ---
 
