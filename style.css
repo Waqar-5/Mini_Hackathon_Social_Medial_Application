@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+.comment {
+  border-left: 3px solid #2b6ef6;
+  padding-left: 6px;
+  margin-bottom: 8px;
+}
+
+.comment-author,
+.comment-time,
+.comment-text {
+  display: block;
+}
+
+.comment-time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fb;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s;
+}
+
+.nav-brand {
+  color: #2b6ef6;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .navbar-toggler-icon div {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  transform: rotate(0);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon div {
+  opacity: 0;
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: none;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #2b6ef6; /* default blue, changes in dark mode */
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon::before {
+  top: 0;
+}
+
+.navbar-toggler-icon div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler-icon::after {
+  bottom: 0;
+}
+
+/* Dark mode toggle button */
+body.dark-mode .navbar-toggler-icon::before,
+body.dark-mode .navbar-toggler-icon div,
+body.dark-mode .navbar-toggler-icon::after {
+  background-color: #eee;
+}
+
+main {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.posts-container {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 20px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(38, 49, 71, 0.06);
+  transition: transform 0.18s ease, background 0.3s, color 0.3s;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+}
+
+.post-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-content {
+  padding: 14px;
+}
+
+.post-title {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.post-description {
+  color: #545b66;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.post-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-like {
+  background: #ffeef0;
+  color: #d6336c;
+  border: none;
+}
+
+.btn-edit {
+  background: #e6f6ff;
+  color: #0b63b8;
+  border: none;
+}
+
+.btn-delete {
+  background: #fff0f3;
+  color: #a61a4d;
+  border: none;
+}
+
+.nav-brand {
+  font-weight: 700; /* bold for brand */
+}
+
+.post-title {
+  font-weight: 600;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.btn-reaction {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.3rem 0.5rem;
+}
+
+.btn-reaction:hover {
+  transform: scale(1.2);
+}
+
+.post-form {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-backdrop.active {
+  display: flex;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 460px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(9, 30, 66, 0.12);
+  transition: background 0.3s, color 0.3s;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 8px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+}
+
+.auth-tab.active {
+  color: #2b6ef6;
+  border-bottom-color: #2b6ef6;
+}
+
+.auth-form {
+  padding: 18px;
+}
+
+@media (max-width: 720px) {
+  .posts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .post-image {
+    height: 180px;
+  }
+}
+
+mark {
+  background-color: #ffd54f;
+  color: #111;
+  border-radius: 3px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background: #1f1f1f;
+}
+
+body.dark-mode .nav-brand,
+body.dark-mode .navbar a {
+  color: #eee !important;
+}
+
+body.dark-mode .text-muted {
+  color: #aaa !important;
+}
+
+body.dark-mode .post-card {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark-mode .post-description {
+  color: #ccc;
+}
+
+body.dark-mode .post-meta {
+  color: #aaa;
+}
+
+body.dark-mode .post-form {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark-mode .modal-card {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #2b2b2b;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-mode .btn-outline-dark {
+  color: #eee;
+  border-color: #eee;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background: #eee;
+  color: #121212;
+}
+
+body.dark-mode .navbar a {
+  color: #eee !important;
+}
