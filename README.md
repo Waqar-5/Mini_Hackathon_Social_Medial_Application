@@ -112,11 +112,13 @@ Copy code
 socialapp/
 │
 ├── index.html        # Main HTML file
+
 ├── style.css         # CSS styles
+
 ├── script.js         # JavaScript logic
+
 └── README.md         # Project documentation
-Contributing
-Contributions are welcome!
+
 
 Fork the repository.
 
