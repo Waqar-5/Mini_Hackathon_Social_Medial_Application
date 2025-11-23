@@ -111,6 +111,7 @@ bash
 Copy code
 socialapp/
 │
+
 ├── index.html        # Main HTML file
 
 ├── style.css         # CSS styles
